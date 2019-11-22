@@ -1,6 +1,8 @@
 package com.family.utils;
 
 import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import sun.misc.BASE64Decoder;
 import sun.misc.BASE64Encoder;
 
@@ -12,6 +14,8 @@ import java.io.UnsupportedEncodingException;
  */
 @Slf4j
 public class Base64Utils {
+
+    //private static Logger log = LoggerFactory.getLogger(Base64Utils.class);
 
     public static void main(String[] args) {
         String admin = Base64Utils.encode("admin");

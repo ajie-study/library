@@ -3,6 +3,7 @@ package com.family.controller;
 import com.family.dto.UserDTO;
 import com.family.model.ResultModel;
 import com.family.service.UserService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -19,6 +20,7 @@ import javax.validation.Valid;
 @RestController
 @CrossOrigin //解决跨域问题
 @RequestMapping("/v1/library/user")
+@Slf4j
 public class LoginController {
 
     @Autowired
@@ -26,6 +28,8 @@ public class LoginController {
 
     @PostMapping("/login")
     public ResponseEntity<ResultModel> login(@RequestBody @Valid UserDTO userDTO){
+
+        log.info("login param:{}", userDTO);
 
         ResultModel resultModel = userServiceImpl.login(userDTO);
 
