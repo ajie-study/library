@@ -3,6 +3,7 @@ package com.family.controller;
 import com.family.dto.UserDTO;
 import com.family.model.ResultModel;
 import com.family.service.UserService;
+import io.swagger.annotations.Api;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -21,6 +22,7 @@ import javax.validation.Valid;
 @CrossOrigin //解决跨域问题
 @RequestMapping("/v1/library/user")
 @Slf4j
+@Api(value = "登录api", description = "用户登录接口")
 public class LoginController {
 
     @Autowired

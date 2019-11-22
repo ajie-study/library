@@ -46,4 +46,19 @@ public enum CodeEnum {
         }
         return null;
     }
+
+    /**
+     * 根据错误信息返回错误状态码
+     * @param message
+     * @return
+     */
+    public static String getCode(String message){
+
+        for (CodeEnum codeEnum : CodeEnum.values()) {
+            if (codeEnum.message.equals(message)) {
+                return codeEnum.code;
+            }
+        }
+        return null;
+    }
 }

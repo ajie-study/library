@@ -29,7 +29,7 @@ public class UserServiceImpl implements UserService {
     private UserMapper userMapper;
 
     @Override
-    public ResultModel login(@Valid UserDTO userDTO) {
+    public ResultModel login(UserDTO userDTO) {
 
         //1、获取用户信息
         User user = userMapper.findByUsername(userDTO.getUsername());

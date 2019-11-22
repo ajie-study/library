@@ -18,5 +18,5 @@ public interface UserService {
      * @param userDTO
      * @return
      */
-    ResultModel login(@Valid UserDTO userDTO);
+    ResultModel login(UserDTO userDTO);
 }

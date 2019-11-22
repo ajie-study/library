@@ -1,11 +1,11 @@
 
 # 设置端口
 server:
-  port: 8080
+  port: 10086
 #日志级别
 logging:
   level:
-    com.rbac.mapper: debug
+    com.family.mapper: debug
 spring:
   #应用名称
   application:
